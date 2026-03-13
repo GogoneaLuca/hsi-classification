@@ -11,9 +11,10 @@ Hyperspectral imaging collects and processes information from across the electro
 * **Data Processing:** * Applied **Savitzky-Golay filters** (`scipy.signal`) to smooth the spectral data and reduce signal noise.
   * Extracted statistical features and reduced dimensionality.
 * **Modeling Strategy:**
-  * Implemented an ensemble approach utilizing Gradient Boosting (**LightGBM**) for structured tabular data.
-  * Configured **Stratified K-Fold Cross-Validation** to ensure the model generalizes well on unseen data.
-  * Used **Early Stopping** based on multi-class log-loss to optimize training rounds.
+  * Implemented a **Hybrid Ensemble** approach combining Deep Learning and Gradient Boosting.
+  * Developed a **1D-ResNet (PyTorch)** model to extract deep features from the raw spectral signals.
+  * Trained a **LightGBM** classifier for the structured tabular data.
+  * Configured **Stratified K-Fold Cross-Validation** to ensure the models generalize well, blending their predictions for the final output.
 
 ##  How to Use
 1. Clone this repository.
